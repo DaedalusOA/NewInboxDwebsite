@@ -24,6 +24,8 @@ h2{
 #MainContainer{
   display: flex;
   flex-direction: column; /* stack vertically */
+  padding-left: 70px;
+  padding-right: 70px;
   
 
 }
@@ -32,51 +34,24 @@ h2{
 
 #TopBar{
   background-color: var(--bg-color);
-  height: 120px;
-  flex: 0 0 auto; /* don’t let flex override it */
-}
-
-
-
-#Salutation{
-  background-color: var(--bg-color);
-  height: 800px;
-  flex: 0 0 auto; /* don’t let flex override it */
-  display: flex;
-  align-items: center;        /* vertical centering */
-  justify-content: space-between; /* items spread left ↔ right */
-
-}
-
-#Salutation img{
-  height: 700px;
-  width: auto;
-}
-#hello{
-  font-weight: 400;
-  font-size: 60px;
-  width: 400px;
-}
-#explnt{
-  padding-right:200px;
-}
-
-#TopBar{
- 
-  margin-left: 50px;
-  margin-right: 50px;
-  margin-bottom: 20px;
-  margin-top: 20px;
+  width: 100%;     /* make it span the full width */
+  height: 100px;
   display: flex;
   align-items: center;        /* vertical centering */
   justify-content: space-between; /* items spread left ↔ right */
   width: 100%;
- 
-
 
  
-
+  
+ 
 }
+
+
+
+
+
+
+
 
 #sep{
   height: 5px;
@@ -87,8 +62,7 @@ h2{
   
   display: flex;
   align-items: center;
-  padding-right: 120px;
-  padding-left: 20px;
+ 
   
   
 
@@ -126,14 +100,13 @@ h2{
   background-color: var(--bg-color);
   height: 800px;
   flex: 0 0 auto; /* don’t let flex override it */
-  margin-left: 40px;
-  margin-right: 40px;
+ 
 }
 #videoAndIntro{
   display: flex;
   flex-direction: row; /* stack vertically */
   width: 100%;
-  height: 100%;
+  gap: 20px; 
  
 }
 
@@ -155,21 +128,14 @@ h2{
 }
 
 #vid video{
-  height: 70%;
-  width: auto;
+  height: auto;
+  width: 80%;
   border-radius: 15px;
   padding: 60px;
   background-color: var(--accent-color);
 }
 
 
-#gotchaAndInfo{
-  display: flex;
-  flex-direction: column; /* stack vertically */
-  width: 100%;
-  height: 100%;
-  
-}
 
 h3{
   font-size: 80px;
@@ -261,12 +227,6 @@ h3{
   padding-right: 5px;
 }
 
-#soppurtlist{
-  display: flex;
-  flex-direction: column; /* stack vertically */
-   justify-content: space-between; /* items spread left ↔ right */
-  
-}
 
 h4{
   color: white;
@@ -279,44 +239,79 @@ h4{
   padding-top: 3px;
   padding-bottom:3px;
 }
-#name{
-  font-weight: 500;
 
+
+
+#salutation{
+  height: 3000px;
 }
 
 
+@media (max-width: 1500px) {
 
-#features{
-  background-color: var(--accent-color);
-  display: flex;
-  padding:50px;
-  flex-direction: column; /* stack vertically */
-  justify-content: space-between; /* items spread left ↔ right */
-   align-items: center;
+  #videoAndIntro{
+    flex-direction: column;
+  }
+  #Introduction{
+     height: 1600px;
+  }
+  #coming{
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  #InnerBurger h2 {
+    font-size: 20px;
+  }
+  #Waitlist{
+    width: 70%;
+  }
+  #Logo img{
+  width: 50px;
+  height: auto;
+}
+
+ 
+  
   
 }
-#features h3{
-  color: var(--bg-color);
-  font-weight: 300;
-  font-size: 60px;
+
+
+
+
+
+
+
+/*rest of stuffff*/
+#TermsAndC{
+  display:flex;
+  background-color: black;
+  height: 60px;
+  align-items: flex-start;
+  flex-direction: column;
+  padding-left: 60px;
+
 }
-#features-grid{
-  display: flex;
-  justify-content: space-between; /* items spread left ↔ right */
+#TermsAndC h2{
+  color: white;
 }
 
-#feature-card{
-  flex:1;
-  padding: 50px;
+
+#About{
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
 }
-p{
-   color: white;
-   font-family: "Rubik", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 300;
-  font-style: normal;
-  font-size: 20px;
- 
+
+#About img{
+  height: 600px;
+  width: auto;
+}
+
+#About h2{
+  width: 800px;
+  padding-right:230px;
 }
 
 
@@ -325,8 +320,7 @@ p{
   display: flex;
   flex-direction: column; /* stack vertically */
   align-items: left;
-  padding-left: 80px;
-  padding-right: 80px;
+
 }
 
 #Reviews h3{
@@ -368,51 +362,69 @@ p{
   margin: 20px;
 }
 
-#About{
+
+#Salutation{
+  background-color: var(--bg-color);
+
+  flex: 0 0 auto; /* don’t let flex override it */
   display: flex;
-  flex-direction: row;
-  padding: 70px;
-  align-items: center;
+  align-items: center;        /* vertical centering */
+  justify-content: space-between; /* items spread left ↔ right */
+
 }
 
-#About img{
-  height: 600px;
+#Salutation img{
+  height: 700px;
   width: auto;
 }
-
-#About h2{
-  width: 800px;
-  padding-right:230px;
+#hello{
+  font-weight: 400;
+  font-size: 60px;
+  width: 400px;
 }
 
 
 
-#TermsAndC{
-  height: 100px;
-  background-color: black;
+#features{
+  background-color: var(--accent-color);
   display: flex;
-  align-items: left;
-  flex-direction: row;
+ 
+  flex-direction: column; /* stack vertically */
+  justify-content: space-between; /* items spread left ↔ right */
    align-items: center;
-
+  
 }
-#TermsAndC h2{
+#features h3{
   color: var(--bg-color);
-  padding-left: 40px;
+  font-weight: 300;
+  font-size: 60px;
+}
+#features-grid{
+  display: flex;
+  justify-content: space-between; /* items spread left ↔ right */
+}
+
+#feature-card{
+  flex:1;
+  padding: 50px;
+}
+p{
+   color: white;
+   font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 20px;
+ 
 }
 
 @media (max-width: 1500px) {
+  #features-grid{
+ flex-direction: column;
+}
+#Salutation{
+   flex-direction: column;
+}
 
-  #videoAndIntro{
-    flex-direction: column;
-  }
-  #Introduction{
-     height: 1600px;
-  }
-  #Salutation{
-    flex-direction: column;
-    height: 1200px;
-    justify-content: space-evenly; /* items spread left ↔ right */
-  }
-  
+
 }

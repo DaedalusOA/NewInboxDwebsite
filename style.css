@@ -400,3 +400,19 @@ p{
   color: var(--bg-color);
   padding-left: 40px;
 }
+
+@media (max-width: 1500px) {
+
+  #videoAndIntro{
+    flex-direction: column;
+  }
+  #Introduction{
+     height: 1600px;
+  }
+  #Salutation{
+    flex-direction: column;
+    height: 1200px;
+    justify-content: space-evenly; /* items spread left ↔ right */
+  }
+  
+}
